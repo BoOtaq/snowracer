@@ -1,0 +1,703 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.nav {
+    background-color:#114575;
+    padding: 46px 0px;
+}
+
+.logo {
+    width: 25%;
+    height: 25%;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.nav__buttons {
+    float:right;
+    margin-top: 24px;
+    padding-right: 14px;
+}
+
+.nav__buttons a {
+    color:white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 18px;
+    display: inline;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav__buttons a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: white;
+    height: 1px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;  
+}
+
+.nav__buttons a:hover:after,
+.nav__buttons a:focus:after,
+.nav__buttons a:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.cover {
+    text-align: center;
+}
+
+.cover h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 56px;
+    text-shadow: 2px 2px black;
+}
+
+.cover__photo {
+    background: url(../images/background.jpeg) center center no-repeat;
+    padding: 80px 0;
+    background-size: cover;
+}
+
+.cover input {
+    padding: 10px;
+    border-style: none;
+}
+
+.text__adjust {
+    padding-bottom: 24px;
+}
+
+.inputs {
+    display:flex;
+    justify-content: center;
+}
+
+.inputs #age {
+    width: 22%;
+}
+
+#age {
+    padding: 12px 30px 12px 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height:16px;
+}
+
+#datepicker {
+    padding: 12px 10px 12px 0px;
+    height:16px;
+}
+
+#datepicker2 {
+    padding: 12px 10px 12px 10px;
+    height:16px;
+}
+
+.inputs button {
+    margin-bottom: 4px;
+    background-color: #FCBD00;
+    font-weight: bold;
+    color:#114575;
+    font-size:14px;
+    border-style: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    transition: all .5s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.inputs button:hover {
+    color: #FCBD00;
+    background-color: #114575;
+    transition: all 0.4s ease;
+}
+
+.inputs button:before {
+    border-radius: 5px;
+    background-color: #114575(174, 100%, 35%);
+}
+
+.inputs button:hover:after,
+.inputs button:focus:after,
+.inputs button:active:after {
+    color: #114575;
+    background-color: #FCBD00;
+}
+
+.inputs button:hover,
+.inputs button:focus,
+.inputs button:active {
+    background-color: #114575(174, 100%, 35%);
+}
+.inputs button:hover,
+.inputs button:focus,
+.inputs button:active {
+    background-color: #114575(174, 100%, 35%);
+}
+
+/* datepicker CSS code */
+
+.datepicker {
+    position: relative;
+}
+.calender {
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #eee;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 6px;
+    padding: 8px;
+}
+.calender > .sp-cal-title {
+    padding-bottom: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calender > .sp-cal-title > a {
+    cursor: pointer;
+    user-select: none;
+}
+.calender > .sp-cal-days {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat( 7, 1fr);
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}
+
+.calender > .sp-cal-days > a {
+    width: 25px;
+    height: 25px;
+    padding: 3px 3px 3px 3px;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 6px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+}
+.calender > .sp-cal-days > a:hover {
+    background-color: #bbdefb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.calender > .sp-cal-label-days {
+    height: 16px;
+    font-size: 12px;
+    font-weight: bolder;
+    display: grid;
+    grid-template-columns: repeat( 7, 1fr);
+    justify-content: center;
+    align-items: center;
+    color:#2979ff;
+}
+
+.calender > .sp-cal-label-days > span {
+    justify-self: center;
+    align-self: center;
+}
+
+.calender > .sp-cal-label-days > span:nth-child(1) {
+    color: rgb(252, 67, 67);
+}
+.sp-cal-today {
+    color: #333;
+}
+
+/* datepicker CSS code */
+
+.benefits {
+    text-align:center;
+    padding-bottom: 100px;
+    padding-top:24px;
+}
+
+.benefits h2 {
+    font-size: 36px;
+    color: #114575;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.benefits__up {
+    display:inline-flex;
+}
+
+.benefits__up div {
+    margin: 50px 24px;
+    text-align:center;
+    justify-content: center;
+}
+
+.benefits__up p {
+    font-size: 14px;
+}
+
+.benefits__down {
+    display:inline-flex;
+}
+
+.benefits__down div {
+    margin: 50px 24px;
+    text-align:center;
+    justify-content: center;
+}
+
+.benefits__down p {
+    font-size: 14px;
+}
+
+.bd__2 img {
+    height: 85px;
+    width: 91px;
+}
+
+footer {
+    background-color: #302E2F;
+    color:white;
+}
+
+.container {
+    display:inline-flex;
+    padding: 34px 0;
+}
+
+.footer__text {
+    font-size: 10px;
+}
+
+.footer__text p {
+    width: 80%;
+}
+
+.footer__logo {
+    width: 40%;
+}
+
+.footer__logo img {
+    vertical-align: middle;
+}
+
+.blue__header {
+    background-color: #4CC6F5;
+    height: 60px;
+    padding-top:20px;
+    text-align: center;
+}
+
+.blue__header input {
+    border:none;
+}
+
+.blue__header #age {
+    width: 16%;
+}
+
+.offer {
+    display:flex;
+    margin-top : 120px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.offer #select {
+    text-align: left;
+    color: #4CC6F5;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top:0px;
+}
+
+.offer h3 {
+    text-transform: uppercase;
+    margin: 24px 0;
+    font-size: 22px;
+}
+
+.offer h4 {
+    font-weight: 400;
+    margin: 24px 0;
+    line-height: 1.8em;
+}
+
+.offer h2 {
+    font-size:50px;
+    margin: 0px;
+}
+
+#ssa {
+    text-transform: none;
+    margin-top: 12px;
+}
+
+.offer div {
+    width: 100%;
+    height: 300px;
+    margin-left: 12px;
+    padding-bottom: 8px;
+    padding-top:12px;
+}
+
+.syp {
+    position:relative;
+    margin-left: 0px;
+}
+
+.syp button {
+    float: left;
+    width: 192px;
+    height: 40px;
+    background:#CACACC;
+    border-style: none;
+    font-weight: bold;
+}
+
+.syp button:hover {
+    background: #cacaccab;
+    cursor: pointer;
+}
+
+.syp p {
+    position:absolute;
+    bottom: 0;
+    margin:0;
+    font-size: 12px;
+}
+
+.sr {
+    background-color: #F0F0F2;
+}
+
+.sr h4 {
+    margin-top: 12px;
+}
+
+.sr__gst {
+    background-color: #4CC6F5;
+    color:white;
+}
+
+.sr__gsp {
+    background-color: #114575;
+    color:white;
+}
+
+.sr__gst button {
+    background-color: #114575;
+    border-style: none;
+    padding: 12px 30px;
+    color:white;
+    border-radius: 5px;
+}
+
+.sr__gst button:hover {
+    background-color: #114575dc;
+    cursor: pointer;
+}
+
+.sr__gsp button {
+    background-color: #FCBD00;
+    border-style: none;
+    padding: 12px 30px;
+    color:white;
+    border-radius: 5px;
+    margin-top:18px;
+}
+
+.sr__gsp button:hover {
+    background-color: #fcbd00d5; 
+    cursor: pointer;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.line div {
+    width: 100%;
+    height: 60px;
+    margin-top:10px;
+    background-color: #F0F0F2;
+}
+
+.l1__r1 {
+    text-align:left;
+    padding:0px;
+    white-space: nowrap;
+}
+
+.l1__r1 h4 {
+    padding-left:10px;
+}
+
+.l1__r1 img:hover {
+    cursor: pointer;
+}
+
+.l1__r2 img {
+    margin: 22px 24px 0px 0px;
+    padding-right:18px;
+}
+
+.l1__r3 img {
+    margin: 22px 24px 0px 0px;
+}
+
+.l1__r4 img {
+    margin: 22px 24px 0px 0px;
+}
+
+.line__other {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.line__other div {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    background-color: #F0F0F2;
+}
+
+.line__other h4 {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.line__other img:hover {
+    cursor: pointer;
+}
+
+.line__different {
+    display:flex;
+    text-align: right;
+    height: 100%;
+    border-bottom: 1px solid #F0F0F2;
+}
+
+.line__different div {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.line__different h4 {
+    text-align: left;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+hr {
+    margin: 0;
+    border-color:rgba(0, 0, 0, 0.082);
+}
+
+.ld__1 {
+    font-weight:100;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.line__other p, .line__different p {
+    color: rgba(0, 0, 0, 0.438);
+    margin-top:20px;
+}
+
+.ldo__4 {
+    font-weight:bold;
+}
+
+#lp {
+    margin-top: 10px;
+}
+
+.under__text {
+    font-size: 12px;
+}
+
+.under__text p {
+    margin: 8px 0px 0px 10px;
+    padding-left: 20px;
+}
+
+.cover__photo2 {
+    background: url(../images/background.jpeg) center center no-repeat;
+    min-height: 700px;
+    background-size: cover;
+}
+
+.group {
+    display: flex;
+    height: 100%; 
+}
+
+.text {
+    color:white;
+    width: 75%;
+    margin-top: 24px;
+    padding: 14px 0px 0px 16px;
+}
+
+.text h1 {
+    font-size: 56px;
+    text-shadow: 2px 2px black;
+}
+
+.yipd {
+    text-align: center;
+    color:black;
+    background-color: #CDEFFB;
+    width: 25%;
+    margin-top: 18px;
+}
+
+#headline {
+    background-color: #4CC6F5;
+    color:white;
+    padding:10px;
+    font-weight: bold;
+    margin-top:0px;
+}
+
+.mini__txt {
+    text-align: left;
+    padding-left: 14px;
+}
+
+.mini__txt p {
+    margin: 0px 0px 4px 0px;
+}
+
+#color {
+    color:#4CC6F5;
+    font-weight: 900;
+}
+
+.info {
+    color:#114575;
+    font-weight: 700;
+}
+
+.price__tag {
+    color:#4CC6F5;
+    background-color: white;
+    font-size: 40px;
+    margin: 12px 24px 0px 40px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 180px;
+}
+
+.price__tag h1 {
+    font-size: 100px;
+}
+
+.price__tagg {
+    padding-left: 16px;
+}
+
+#tp {
+    margin-bottom:0px;
+    margin-top: 24px;
+    padding-top: 24px;
+}
+
+#dc {
+    margin-bottom: 0px;
+}
+
+#dc img {
+    height:20px;
+    width:20px;
+}
+
+.yipd button {
+    background-color: #114575;
+    border-style: none;
+    padding: 12px 30px;
+    color:white;
+    border-radius: 5px;
+    width: 260px;
+    margin-top: 6px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.yipd button:hover {
+    background-color: #114575de;
+    transition: all .5s;
+    cursor:pointer;
+}
+
+.link {
+    text-decoration: none;
+    margin: 10px 0px;
+}
+
+.link a {
+    color: #114575;
+    font-weight: bold;
+    border-bottom: #114575 dotted 1.5px;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #114575a6;
+}
+
+.collapsible {
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .content {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
